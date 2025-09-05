@@ -7,7 +7,7 @@ def main():
     channel.queue_declare(queue='hello')
     
     def callback(ch, method, properties, body):
-        print(f" [Y] Received {body}, Channel: {ch}, Method: {method}, Properties: {properties}")
+        print(f"\n[Y] Received {body}\n")
         
     channel.basic_consume(queue='hello',
                           on_message_callback=callback,
